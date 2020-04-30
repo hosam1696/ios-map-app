@@ -50,8 +50,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -60,5 +58,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This app Requires to access you location service to load your data</string>
+	<key>NSLocationUsageDescription</key>
+	<string>This app Requires to access you location service to load your data</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app Requires to access you location service to load your data</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app Requires to access you location service to load your data</string>
 </dict>
 </plist>
