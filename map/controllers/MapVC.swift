@@ -306,7 +306,16 @@ extension MapVC: UICollectionViewDelegate, UICollectionViewDataSource {
         
         let image = flickerApi.images[indexPath.row]
         
-        performSegue(withIdentifier: Identifiers.imageViewerIdentifier.rawValue, sender: image)
+        guard let imageViewVC = storyboard?.instantiateViewController(withIdentifier: Identifiers.ImageViewerId.rawValue) as? ImageViewer
+            else {return }
+        
+        imageViewVC.modalPresentationStyle = .fullScreen
+        
+        imageViewVC.initData(for: image)
+        
+        self.present(imageViewVC, animated: true, completion: nil)
+        
+//        performSegue(withIdentifier: Identifiers.imageViewerIdentifier.rawValue, sender: image)
     }
     
 }

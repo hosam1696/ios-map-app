@@ -87,7 +87,7 @@
                         <outlet property="appMapBottomConstraint" destination="BGJ-eG-uN1" id="uUp-v5-VCK"/>
                         <outlet property="imagesView" destination="Z9w-8E-NWw" id="HhD-uK-ibd"/>
                         <outlet property="pinBtn" destination="emF-Gy-1mj" id="0vE-bl-3Ds"/>
-                        <segue destination="rZd-8C-vwS" kind="showDetail" identifier="imageViewerIdentifier" id="ICo-uN-taA"/>
+                        <segue destination="rZd-8C-vwS" kind="show" identifier="imageViewerIdentifier" id="ICo-uN-taA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -103,7 +103,7 @@
         <!--Image Viewer-->
         <scene sceneID="j33-O4-nHJ">
             <objects>
-                <viewController id="rZd-8C-vwS" customClass="ImageViewer" customModule="map" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageViewerId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rZd-8C-vwS" customClass="ImageViewer" customModule="map" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LIb-3P-ij9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,10 +131,11 @@
                             <constraint firstItem="1cq-dd-DaI" firstAttribute="leading" secondItem="dm3-6p-rh6" secondAttribute="leading" id="NwH-4g-zIc"/>
                             <constraint firstAttribute="bottom" secondItem="1cq-dd-DaI" secondAttribute="bottom" id="TsV-Xa-XwV"/>
                             <constraint firstItem="7fR-Nt-LtT" firstAttribute="leading" secondItem="dm3-6p-rh6" secondAttribute="leading" constant="28" id="TxK-UX-F7t"/>
-                            <constraint firstItem="1cq-dd-DaI" firstAttribute="top" secondItem="dm3-6p-rh6" secondAttribute="top" id="yZD-wp-RqM"/>
+                            <constraint firstItem="1cq-dd-DaI" firstAttribute="top" secondItem="LIb-3P-ij9" secondAttribute="top" id="yZD-wp-RqM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dm3-6p-rh6"/>
                     </view>
+                    <navigationItem key="navigationItem" id="h7n-cg-hQF"/>
                     <connections>
                         <outlet property="imageView" destination="1cq-dd-DaI" id="nwW-A9-Pzf"/>
                     </connections>

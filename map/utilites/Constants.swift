@@ -12,7 +12,8 @@ import Foundation
 enum Identifiers: String {
     case droppablePin,
          imageCollectionCell,
-         imageViewerIdentifier
+         imageViewerIdentifier,
+         ImageViewerId
 }
 
 
