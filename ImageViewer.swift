@@ -27,5 +27,8 @@ class ImageViewer: UIViewController {
     func initData(for image: UIImage) {
         self.seenImage = image
     }
-
+    @IBAction func onClose(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
