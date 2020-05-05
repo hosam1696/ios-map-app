@@ -26,10 +26,10 @@ class Images: UIView {
     
     
     private func setup() {
-        layer.cornerRadius = 40
+//        layer.cornerRadius = 40
         backgroundColor = .white
 //        layer.cornerCurve
-        clipsToBounds = true
+//        clipsToBounds = true
         
         let v = UIView(frame: CGRect(x: (frame.size.width / 2) - 30, y: 16, width: 60, height: 6))
         v.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)

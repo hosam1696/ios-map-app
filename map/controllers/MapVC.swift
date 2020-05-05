@@ -150,16 +150,21 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         
         flickerApi.getUrls(handler: { (status) in
             print("urls status", status)
-            if status == true {
+            if status == true  {
                 print("Numbers of Images to load \(self.flickerApi.imagesUrls.count)")
+                if self.flickerApi.imagesUrls.count > 1 {
+                    
                 self.flickerApi.loadImages{ s in
-//                    print(s, self.flickerApi.images.count)
                     self.progressLbl?.text = "\(self.flickerApi.imageLoadCount) Images Loaded."
-                    if self.flickerApi.images.count == self.flickerApi.numberOfImages {
+                    if self.flickerApi.images.count == self.flickerApi.imagesUrls.count {
                         self.removeProgressLabel()
                         self.removeSpinner()
                         self.collectionView.reloadData()
                     }
+                }
+                } else {
+                    self.progressLbl?.text = "No Available Images, Try another Location"
+                    self.removeSpinner()
                 }
             } else {
                 print("Error Getting Images Urls")

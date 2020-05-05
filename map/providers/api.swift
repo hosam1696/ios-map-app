@@ -27,7 +27,7 @@ class FlickerApi {
     var images: [UIImage] = []
     var imageLoadCount: String {
         get {
-            return "\(images.count)/\(numberOfImages)"
+            return "\(images.count)/\(imagesUrls.count)"
         }
     }
     
